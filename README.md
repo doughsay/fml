@@ -2,13 +2,16 @@ FML: Functional Markup Language
 ===============================
 
 FML is a functional representation of HTML or more generally, XML.  It's meant
-to be used in palce of a templating engine, either client-side or server-side
+to be used in place of a templating engine, either client-side or server-side
 using Node.js or anything supporting CommonJS modules.
 
 Examples
 --------
 
-All tags have correspodning functions, and they all follow a similar pattern.
+All tags have corresponding functions, and they all follow a similar pattern.
+
+	br()
+	// -> <br>
 
 	div()
 	// -> <div></div>
@@ -36,7 +39,7 @@ passed around, whatever!
 	}
 
 	function people(ps) {
-		return fml.ulI('People', ps.map(p));
+		return fml.ulI('People', ps.map(person));
 	}
 
 	var ps = [
